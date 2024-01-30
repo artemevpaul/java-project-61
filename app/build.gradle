@@ -25,3 +25,6 @@ application {
 compileJava {
     options.release = 20
 }
+tasks.named('run', JavaExec) {
+    standardInput = System.in
+}
