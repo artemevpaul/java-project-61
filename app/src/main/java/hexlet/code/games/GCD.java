@@ -30,7 +30,7 @@ public class GCD {
             Engine.roundResult = "win";
             Engine.count++;
         } else {
-            System.out.print(gcdAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer + "\n");
+            System.out.print("'" + gcdAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" +  correctAnswer + "'" + "\n");
             Engine.roundResult = "lost";
             Engine.count = 0;
         }

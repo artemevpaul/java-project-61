@@ -35,7 +35,7 @@ public class Calc {
                 Engine.roundResult = "win";
                 Engine.count++;
             } else {
-                System.out.print(operationResult + " is wrong answer ;(. Correct answer was " + correctAnswer +" ");
+                System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'" +" ");
                 Engine.roundResult = "lost";
                 Engine.count = 0;
             }

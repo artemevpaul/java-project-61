@@ -18,58 +18,34 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         //scannerUsername.close();
     }
+
+    public static void userComms(){
+        switch (roundResult) {
+            case "win":
+                System.out.println("Correct!");
+                break;
+            case "lost":
+                break;
+        }
+
+        if (count == 0) {
+            System.out.print("\nLet's try again, " + Engine.userName + "!\n");
+            System.exit(0);
+        } else if (count == 3) {
+            System.out.print("Congratulations, " + Engine.userName + "!\n");
+        }
+    }
     public static void gameLoop() {
         while (count < 3) {
             if (App.gameName.equals("2")) {
                 isEven.checkEven();
-
-                switch (roundResult) {
-                    case "win":
-                        System.out.println("Correct!");
-                        break;
-                    case "lost":
-                        break;
-                }
-
-                if (count == 0) {
-                    System.out.print("\nLet's try again, " + Engine.userName + "!\n");
-                    break;
-                } else if (count == 3) {
-                    System.out.print("Congratulations, " + Engine.userName + "!\n");
-                }
+                Engine.userComms();
             } else if(App.gameName.equals("3")) {
                 Calc.calculate();
-
-                switch (roundResult) {
-                    case "win":
-                        System.out.println("Correct!");
-                        break;
-                    case "lost":
-                        break;
-                }
-
-                if (count == 0) {
-                    System.out.print("\nLet's try again, " + Engine.userName + "!\n");
-                    break;
-                } else if (count == 3) {
-                    System.out.print("Congratulations, " + Engine.userName + "!\n");
-                }
+                Engine.userComms();
             } else if (App.gameName.equals("4")) {
                 GCD.findGCD();
-                switch (roundResult) {
-                    case "win":
-                        System.out.println("Correct!");
-                        break;
-                    case "lost":
-                        break;
-                }
-
-                if (count == 0) {
-                    System.out.print("\nLet's try again, " + Engine.userName + "!\n");
-                    break;
-                } else if (count == 3) {
-                    System.out.print("Congratulations, " + Engine.userName + "!\n");
-                }
+                Engine.userComms();
             }
         }
     }

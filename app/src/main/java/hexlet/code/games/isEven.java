@@ -25,7 +25,7 @@ public class isEven {
                 Engine.roundResult = "win";
                 Engine.count++;
             } else if(!isEvenAnswer.equals(correctAnswer)){
-                System.out.print(isEvenAnswer + " is wrong answer ;(. Correct answer was " + correctAnswer + "\n");
+                System.out.print("'" + isEvenAnswer+ "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'" + "\n");
                 Engine.roundResult = "lost";
                 Engine.count = 0;
             }
