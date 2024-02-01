@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
 import hexlet.code.games.isEven;
 
 import java.util.Scanner;
@@ -17,14 +18,6 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         //scannerUsername.close();
     }
-
-    public static void randomNumber() {
-        int max = 1000, min = 1;
-        int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
-        int secondNumber = (min + (int) (Math.random() * ((max - min) + 1)));
-        System.out.println(firstNumber);
-    }
-
     public static void gameLoop() {
         while (count < 3) {
             if (App.gameName.equals("2")) {
@@ -47,6 +40,22 @@ public class Engine {
             } else if(App.gameName.equals("3")) {
                 Calc.calculate();
 
+                switch (roundResult) {
+                    case "win":
+                        System.out.println("Correct!");
+                        break;
+                    case "lost":
+                        break;
+                }
+
+                if (count == 0) {
+                    System.out.print("\nLet's try again, " + Engine.userName + "!\n");
+                    break;
+                } else if (count == 3) {
+                    System.out.print("Congratulations, " + Engine.userName + "!\n");
+                }
+            } else if (App.gameName.equals("4")) {
+                GCD.findGCD();
                 switch (roundResult) {
                     case "win":
                         System.out.println("Correct!");
