@@ -12,7 +12,7 @@ public class isEven {
         var count = 0;
         Scanner scannerAnswer = new Scanner(System.in);
         while (count < 3) {
-            int max = 10000000, min = 1;
+            int max = 1000, min = 1;
             int numberToCheck = (min + (int) (Math.random() * ((max - min) + 1)));
             System.out.print("Answer 'yes' if the number is even, otherwise answer 'no'. \n");
             System.out.print("Question: " + numberToCheck + "\n");
