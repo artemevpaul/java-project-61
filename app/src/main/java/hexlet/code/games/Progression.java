@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class Progression {
@@ -19,8 +19,15 @@ public class Progression {
         }
         var correctAnswer = newProgression[progressionBlankElement];
         newProgression[progressionBlankElement] = "..";
+        StringBuilder progToCheck = new StringBuilder();
+        for (int i = 0; i < newProgression.length; i++) {
+            progToCheck.append(newProgression[i]);
+            if (i < newProgression.length - 1) {
+                progToCheck.append(" ");
+            }
+        }
         System.out.print("What number is missing in the progression? \n");
-        System.out.print("Question: " + (Arrays.toString(newProgression)) + "\n");
+        System.out.print("Question: " + progToCheck + "\n");
         System.out.print("Your answer: ");
         Scanner scannerAnswer = new Scanner(System.in);
         String missingNumber = scannerAnswer.next();
