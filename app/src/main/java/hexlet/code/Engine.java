@@ -27,16 +27,14 @@ public class Engine {
             case "win":
                 System.out.println("Correct!");
                 break;
-            case "lost":
-                break;
             default:
                 break;
         }
 
         if (count == 0) {
             System.out.print("\nLet's try again, " + Engine.userName + "!\n");
-            System.exit(finalCount);
-        } else if (count == 3) {
+            System.exit(0);
+        } else if (count == finalCount) {
             System.out.print("Congratulations, " + Engine.userName + "!\n");
         }
     }
