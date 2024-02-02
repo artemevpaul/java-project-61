@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 import hexlet.code.games.isEven;
 
 import java.util.Scanner;
@@ -45,6 +46,9 @@ public class Engine {
                 Engine.userComms();
             } else if (App.gameName.equals("4")) {
                 GCD.findGCD();
+                Engine.userComms();
+            } else if (App.gameName.equals("5")){
+                Progression.generator();
                 Engine.userComms();
             }
         }
