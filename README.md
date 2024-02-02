@@ -8,3 +8,5 @@ Example of "Even" game: https://asciinema.org/a/yFE0hDTG7epP39jg68BZkQEiW
 Example of "GCD" game: https://asciinema.org/a/vOjQIJ4aD7Sd6b5Ucj5LyvhrH
 
 Example of "Progression" game: https://asciinema.org/a/91zmDPptHmu4bjWYQWdETcQej
+
+Example of "Prime" game: https://asciinema.org/a/r7fNcKgCk8dXTgnsdBws5NZJr
