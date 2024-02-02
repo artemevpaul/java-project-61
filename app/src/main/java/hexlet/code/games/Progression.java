@@ -12,8 +12,8 @@ public class Progression {
         var newProgression = new String[progressionLength];
         var progressionBlankElement = (int) (Math.random() * progressionLength);
         var progressionDiff = (int) (Math.random() * progressionLength);
-        var progressionStart = String.valueOf(minProgLength +
-                (int) (Math.random() * ((maxProgLength - minProgLength) + 1)));
+        var progressionStart = String.valueOf(minProgLength
+                + (int) (Math.random() * ((maxProgLength - minProgLength) + 1)));
         newProgression[0] = progressionStart;
         for (var i = 1; i < progressionLength; i++) {
             newProgression[i] = String.valueOf(Integer.parseInt(newProgression[i - 1]) + progressionDiff);

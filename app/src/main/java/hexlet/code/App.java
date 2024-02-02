@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
     public static String gameName = "";
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.print("Welcome to the Brain Games! \n");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter the game number and press Enter. \n");

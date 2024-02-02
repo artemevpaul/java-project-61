@@ -12,6 +12,8 @@ public class Engine {
     public static String userName;
     public static int count = 0;
     public static String roundResult = "";
+
+    static final int finalCount = 3;
     public static void greet() {
         System.out.println("Welcome to the Brain Games");
         System.out.print("May I have your name? ");
@@ -26,19 +28,18 @@ public class Engine {
             case "win":
                 System.out.println("Correct!");
                 break;
-            case "lost":
+            default:
                 break;
         }
 
         if (count == 0) {
             System.out.print("\nLet's try again, " + Engine.userName + "!\n");
-            System.exit(0);
+            System.exit(finalCount);
         } else if (count == 3) {
             System.out.print("Congratulations, " + Engine.userName + "!\n");
         }
     }
     public static void gameLoop() {
-        final int finalCount = 3;
         while (count < finalCount) {
             if (App.gameName.equals("2")) {
                 if (Engine.count == 0) {
