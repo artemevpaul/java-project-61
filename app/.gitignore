@@ -3,10 +3,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-demo.cast
-demo2.cast
-Prime.cast
-Progression.cast
+app/demo.cast
+app/demo2.cast
+app/Prime.cast
+app/Progression.cast
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
