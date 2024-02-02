@@ -10,8 +10,11 @@ public class Prime {
             Engine.greet();
         }
         int max = 50, min = 1;
-        int numberToCheck = (min + (int) (Math.random() * ((max - min) + 1)));
+        int numberToCheck =(min + (int) (Math.random() * ((max - min) + 1)));
         var correctAnswer = "yes";
+        if (numberToCheck<2) {
+            correctAnswer = "no";
+        }
         for (var i = 2; i <= Math.sqrt(numberToCheck); i++) {
             if (numberToCheck % i == 0) {
                 correctAnswer = "no";
