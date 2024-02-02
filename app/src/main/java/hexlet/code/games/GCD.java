@@ -6,9 +6,6 @@ import java.util.Scanner;
 
 public class GCD {
     public static void findGCD(){
-        if (Engine.count == 0) {
-            Engine.greet();
-        }
         int max = 1000, min = 1;
         int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
         int secondNumber = (min + (int) (Math.random() * ((firstNumber - min) + 1)));

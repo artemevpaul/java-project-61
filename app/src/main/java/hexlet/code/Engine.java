@@ -36,18 +36,33 @@ public class Engine {
     public static void gameLoop() {
         while (count < 3) {
             if (App.gameName.equals("2")) {
+                if (Engine.count == 0) {
+                    Engine.greet();
+                }
                 isEven.checkEven();
                 Engine.userComms();
             } else if(App.gameName.equals("3")) {
+                if (Engine.count == 0) {
+                    Engine.greet();
+                }
                 Calc.calculate();
                 Engine.userComms();
             } else if (App.gameName.equals("4")) {
+                if (Engine.count == 0) {
+                    Engine.greet();
+                }
                 GCD.findGCD();
                 Engine.userComms();
             } else if (App.gameName.equals("5")){
+                if (Engine.count == 0) {
+                    Engine.greet();
+                }
                 Progression.generator();
                 Engine.userComms();
             } else if (App.gameName.equals("6")) {
+                if (Engine.count == 0) {
+                    Engine.greet();
+                }
                 Prime.primeGame();
                 Engine.userComms();
             }

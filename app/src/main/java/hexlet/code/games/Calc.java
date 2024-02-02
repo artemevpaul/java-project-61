@@ -6,9 +6,6 @@ import java.util.Scanner;
 
 public class Calc {
     public static void calculate(){
-        if (Engine.count == 0) {
-            Engine.greet();
-        }
             Scanner scannerAnswer = new Scanner(System.in);
             int max = 1000, min = 1;
             int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
@@ -24,6 +21,7 @@ public class Calc {
             };
             System.out.print("What is the result of the expression? ");
             System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber +" ");
+            System.out.print("Your answer: ");
             int operationResult = scannerAnswer.nextInt();
             if (operation.equals("+") && operationResult == (firstNumber + secondNumber)){
                 Engine.roundResult = "win";

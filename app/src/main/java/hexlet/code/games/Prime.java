@@ -6,9 +6,6 @@ import java.util.Scanner;
 
 public class Prime {
     public static void primeGame() {
-        if (Engine.count == 0) {
-            Engine.greet();
-        }
         int max = 50, min = 1;
         int numberToCheck =(min + (int) (Math.random() * ((max - min) + 1)));
         var correctAnswer = "yes";
@@ -26,11 +23,11 @@ public class Prime {
         System.out.print("Your answer: ");
         Scanner scannerAnswer = new Scanner(System.in);
         String isPrimeAnswer = scannerAnswer.next();
-        if (isPrimeAnswer.equals(correctAnswer)){
+        if (isPrimeAnswer.equals(correctAnswer)) {
             Engine.roundResult = "win";
             Engine.count++;
-        } else if(!isPrimeAnswer.equals(correctAnswer)){
-            System.out.print("'" + isPrimeAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'" + "\n");
+        } else {
+            System.out.println("'" + isPrimeAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
             Engine.roundResult = "lost";
             Engine.count = 0;
         }

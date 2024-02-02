@@ -7,9 +7,6 @@ import java.util.Scanner;
 
 public class Progression {
     public static void generator(){
-        if (Engine.count == 0) {
-            Engine.greet();
-        }
         int maxProgLength = 10, minProgLength = 5;
         int progressionLength = minProgLength + (int) (Math.random() * ((maxProgLength - minProgLength) + 1));
         var newProgression = new String[progressionLength];
@@ -27,11 +24,11 @@ public class Progression {
         System.out.print("Your answer: ");
         Scanner scannerAnswer = new Scanner(System.in);
         String missingNumber = scannerAnswer.next();
-        if (missingNumber.equals(correctAnswer)){
+        if (missingNumber.equals(correctAnswer)) {
             Engine.roundResult = "win";
             Engine.count++;
-        } else if(!missingNumber.equals(correctAnswer)){
-            System.out.print("'" + missingNumber + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'" + "\n");
+        } else {
+            System.out.println("'" + missingNumber + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
             Engine.roundResult = "lost";
             Engine.count = 0;
         }
