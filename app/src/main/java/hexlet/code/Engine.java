@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.isEven;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -49,6 +46,9 @@ public class Engine {
                 Engine.userComms();
             } else if (App.gameName.equals("5")){
                 Progression.generator();
+                Engine.userComms();
+            } else if (App.gameName.equals("6")) {
+                Prime.primeGame();
                 Engine.userComms();
             }
         }
