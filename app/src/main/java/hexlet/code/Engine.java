@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -17,7 +21,7 @@ public class Engine {
         //scannerUsername.close();
     }
 
-    public static void userComms(){
+    public static void userComms() {
         switch (roundResult) {
             case "win":
                 System.out.println("Correct!");
@@ -39,9 +43,9 @@ public class Engine {
                 if (Engine.count == 0) {
                     Engine.greet();
                 }
-                isEven.checkEven();
+                Even.checkEven();
                 Engine.userComms();
-            } else if(App.gameName.equals("3")) {
+            } else if (App.gameName.equals("3")) {
                 if (Engine.count == 0) {
                     Engine.greet();
                 }
@@ -53,7 +57,7 @@ public class Engine {
                 }
                 GCD.findGCD();
                 Engine.userComms();
-            } else if (App.gameName.equals("5")){
+            } else if (App.gameName.equals("5")) {
                 if (Engine.count == 0) {
                     Engine.greet();
                 }

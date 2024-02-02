@@ -5,12 +5,13 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Calc {
-    public static void calculate(){
+    public static void calculate() {
             Scanner scannerAnswer = new Scanner(System.in);
-            int max = 1000, min = 1;
+            int max = 1000;
+            int min = 1;
             int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
             int secondNumber = (min + (int) (Math.random() * ((max - min) + 1)));
-            String[] operations = {"+","-","*"};
+            String[] operations = {"+", "-", "*"};
             int randomOperation = (int) (Math.random() * operations.length);
             var operation = operations[randomOperation];
             var correctAnswer = switch (operation) {
@@ -20,20 +21,21 @@ public class Calc {
                 default -> 0;
             };
             System.out.print("What is the result of the expression? ");
-            System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber +" ");
+            System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber + " ");
             System.out.print("Your answer: ");
             int operationResult = scannerAnswer.nextInt();
-            if (operation.equals("+") && operationResult == (firstNumber + secondNumber)){
+            if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
                 Engine.roundResult = "win";
                 Engine.count++;
-            } else if (operation.equals("-") && operationResult == (firstNumber - secondNumber)){
+            } else if (operation.equals("-") && operationResult == (firstNumber - secondNumber)) {
                 Engine.roundResult = "win";
                 Engine.count++;
             } else if (operation.equals("*") && operationResult == (firstNumber * secondNumber)) {
                 Engine.roundResult = "win";
                 Engine.count++;
             } else {
-                System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was " + "'" + correctAnswer + "'" +" ");
+                System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was " +
+                        "'" + correctAnswer + "'" + " ");
                 Engine.roundResult = "lost";
                 Engine.count = 0;
             }
