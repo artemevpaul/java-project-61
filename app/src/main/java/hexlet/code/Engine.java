@@ -12,7 +12,6 @@ public class Engine {
     public static String userName;
     public static int count = 0;
     public static String roundResult = "";
-
     static final int finalCount = 3;
     public static void greet() {
         System.out.println("Welcome to the Brain Games");
@@ -27,6 +26,8 @@ public class Engine {
         switch (roundResult) {
             case "win":
                 System.out.println("Correct!");
+                break;
+            case "lost":
                 break;
             default:
                 break;
