@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Prime {
     public static void primeGame() {
-        int max = 50;
-        int min = 1;
+        final int max = 50;
+        final int min = 1;
         int numberToCheck = (min + (int) (Math.random() * ((max - min) + 1)));
         var correctAnswer = "yes";
         if (numberToCheck < 2) {
@@ -28,8 +28,8 @@ public class Prime {
             Engine.roundResult = "win";
             Engine.count++;
         } else {
-            System.out.println("'" + isPrimeAnswer + "' is wrong answer ;(. Correct answer was '" +
-                    correctAnswer + "'");
+            System.out.println("'" + isPrimeAnswer + "' is wrong answer ;(. Correct answer was '"
+                    + correctAnswer + "'");
             Engine.roundResult = "lost";
             Engine.count = 0;
         }

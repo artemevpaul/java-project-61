@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Progression {
     public static void generator() {
-        int maxProgLength = 10;
-        int minProgLength = 5;
+        final int maxProgLength = 10;
+        final int minProgLength = 5;
         int progressionLength = minProgLength + (int) (Math.random() * ((maxProgLength - minProgLength) + 1));
         var newProgression = new String[progressionLength];
         var progressionBlankElement = (int) (Math.random() * progressionLength);

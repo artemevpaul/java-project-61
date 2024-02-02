@@ -38,7 +38,8 @@ public class Engine {
         }
     }
     public static void gameLoop() {
-        while (count < 3) {
+        final int finalCount = 3;
+        while (count < finalCount) {
             if (App.gameName.equals("2")) {
                 if (Engine.count == 0) {
                     Engine.greet();

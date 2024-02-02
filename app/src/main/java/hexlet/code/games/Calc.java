@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class Calc {
     public static void calculate() {
             Scanner scannerAnswer = new Scanner(System.in);
-            int max = 1000;
-            int min = 1;
+            final int max = 1000;
+            final int min = 1;
             int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
             int secondNumber = (min + (int) (Math.random() * ((max - min) + 1)));
             String[] operations = {"+", "-", "*"};
@@ -34,8 +34,8 @@ public class Calc {
                 Engine.roundResult = "win";
                 Engine.count++;
             } else {
-                System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was " +
-                        "'" + correctAnswer + "'" + " ");
+                System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was "
+                        + "'" + correctAnswer + "'" + " ");
                 Engine.roundResult = "lost";
                 Engine.count = 0;
             }

@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class GCD {
     public static void findGCD() {
-        int max = 1000;
-        int min = 1;
+        final int max = 1000;
+        final int min = 1;
         int firstNumber = (min + (int) (Math.random() * ((max - min) + 1)));
         int secondNumber = (min + (int) (Math.random() * ((firstNumber - min) + 1)));
         var a = firstNumber;
@@ -28,8 +28,8 @@ public class GCD {
             Engine.roundResult = "win";
             Engine.count++;
         } else {
-            System.out.print("'" + gcdAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" +
-                    correctAnswer + "'" + "\n");
+            System.out.print("'" + gcdAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'"
+                    + correctAnswer + "'" + "\n");
             Engine.roundResult = "lost";
             Engine.count = 0;
         }
