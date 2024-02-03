@@ -65,36 +65,42 @@ public class Engine {
     }
     public static void gameLoop() {
         while (getCount() < FINAL_COUNT) {
-            if (getGameName().equals("2")) {
-                if (getCount() == 0) {
-                    Engine.greet();
+            switch (getGameName()) {
+                case "2" -> {
+                    if (getCount() == 0) {
+                        Engine.greet();
+                    }
+                    Even.checkEven();
+                    Engine.userComms();
                 }
-                Even.checkEven();
-                Engine.userComms();
-            } else if (getGameName().equals("3")) {
-                if (getCount() == 0) {
-                    Engine.greet();
+                case "3" -> {
+                    if (getCount() == 0) {
+                        Engine.greet();
+                    }
+                    Calc.calculate();
+                    Engine.userComms();
                 }
-                Calc.calculate();
-                Engine.userComms();
-            } else if (getGameName().equals("4")) {
-                if (getCount() == 0) {
-                    Engine.greet();
+                case "4" -> {
+                    if (getCount() == 0) {
+                        Engine.greet();
+                    }
+                    GCD.findGCD();
+                    Engine.userComms();
                 }
-                GCD.findGCD();
-                Engine.userComms();
-            } else if (getGameName().equals("5")) {
-                if (getCount() == 0) {
-                    Engine.greet();
+                case "5" -> {
+                    if (getCount() == 0) {
+                        Engine.greet();
+                    }
+                    Progression.generator();
+                    Engine.userComms();
                 }
-                Progression.generator();
-                Engine.userComms();
-            } else if (getGameName().equals("6")) {
-                if (getCount() == 0) {
-                    Engine.greet();
+                case "6" -> {
+                    if (getCount() == 0) {
+                        Engine.greet();
+                    }
+                    Prime.primeGame();
+                    Engine.userComms();
                 }
-                Prime.primeGame();
-                Engine.userComms();
             }
         }
     }
