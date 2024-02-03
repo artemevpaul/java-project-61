@@ -34,10 +34,10 @@ public class Engine {
         public static String getRoundResult() {
         return roundResult;
         }
-        public static void setRoundResult(String inputRoundResult){
+        public static void setRoundResult(String inputRoundResult) {
         roundResult = inputRoundResult;
         }
-    static final int Final_Count = 3;
+    static final int FINAL_COUNT = 3;
     public static void greet() {
         System.out.println("Welcome to the Brain Games");
         System.out.print("May I have your name? ");
@@ -59,12 +59,12 @@ public class Engine {
         if (getCount() == 0) {
             System.out.print("\nLet's try again, " + getUserName() + "!\n");
             System.exit(0);
-        } else if (getCount() == Final_Count) {
+        } else if (getCount() == FINAL_COUNT) {
             System.out.print("Congratulations, " + getUserName() + "!\n");
         }
     }
     public static void gameLoop() {
-        while (getCount() < Final_Count) {
+        while (getCount() < FINAL_COUNT) {
             if (getGameName().equals("2")) {
                 if (getCount() == 0) {
                     Engine.greet();

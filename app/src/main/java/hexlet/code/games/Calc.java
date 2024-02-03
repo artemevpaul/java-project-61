@@ -26,13 +26,13 @@ public class Calc {
             int operationResult = scannerAnswer.nextInt();
             if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
                 Engine.setRoundResult("win");
-                Engine.setCount(Engine.getCount() + 1);;
+                Engine.setCount(Engine.getCount() + 1);
             } else if (operation.equals("-") && operationResult == (firstNumber - secondNumber)) {
                 Engine.setRoundResult("win");
-                Engine.setCount(Engine.getCount() + 1);;
+                Engine.setCount(Engine.getCount() + 1);
             } else if (operation.equals("*") && operationResult == (firstNumber * secondNumber)) {
                 Engine.setRoundResult("win");
-                Engine.setCount(Engine.getCount() + 1);;
+                Engine.setCount(Engine.getCount() + 1);
             } else {
                 System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was "
                         + "'" + correctAnswer + "'" + " ");
