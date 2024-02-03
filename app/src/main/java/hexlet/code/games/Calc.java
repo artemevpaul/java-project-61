@@ -21,8 +21,8 @@ public class Calc {
                 default -> 0;
             };
             Engine.setCorrectAnswer(Integer.toString(correctAnswer));
-            System.out.print("What is the result of the expression? ");
-            System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber + " ");
+            System.out.print("What is the result of the expression? \n");
+            System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber + " \n");
             System.out.print("Your answer: ");
             Engine.setUserAnswer(scannerAnswer.next());
             /*if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
