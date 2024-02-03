@@ -25,19 +25,19 @@ public class Calc {
             System.out.print("Your answer: ");
             int operationResult = scannerAnswer.nextInt();
             if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
-                Engine.roundResult = "win";
-                Engine.count++;
+                Engine.setRoundResult("win");
+                Engine.setCount(Engine.getCount() + 1);;
             } else if (operation.equals("-") && operationResult == (firstNumber - secondNumber)) {
-                Engine.roundResult = "win";
-                Engine.count++;
+                Engine.setRoundResult("win");
+                Engine.setCount(Engine.getCount() + 1);;
             } else if (operation.equals("*") && operationResult == (firstNumber * secondNumber)) {
-                Engine.roundResult = "win";
-                Engine.count++;
+                Engine.setRoundResult("win");
+                Engine.setCount(Engine.getCount() + 1);;
             } else {
                 System.out.print("'" + operationResult + "'" + " is wrong answer ;(. Correct answer was "
                         + "'" + correctAnswer + "'" + " ");
-                Engine.roundResult = "lost";
-                Engine.count = 0;
+                Engine.setRoundResult("lost");
+                Engine.setCount(0);
             }
     }
 }

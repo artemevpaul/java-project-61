@@ -9,21 +9,46 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class Engine {
-    public static String userName;
-    public static int count = 0;
-    public static String roundResult = "";
-    static final int finalCount = 3;
+    private static String gameName = "";
+        public static String getGameName() {
+        return gameName;
+        }
+        public static void setGameName(String inputName) {
+        gameName = inputName;
+        }
+    private static String userName;
+        public static String getUserName() {
+        return userName;
+        }
+        public static void setUserName(String inputUserName) {
+        userName = inputUserName;
+        }
+    private static int count = 0;
+        public static int getCount() {
+        return count;
+        }
+        public static void setCount(int inputCount) {
+        count = inputCount;
+        }
+    private static String roundResult = "";
+        public static String getRoundResult() {
+        return roundResult;
+        }
+        public static void setRoundResult(String inputRoundResult){
+        roundResult = inputRoundResult;
+        }
+    static final int Final_Count = 3;
     public static void greet() {
         System.out.println("Welcome to the Brain Games");
         System.out.print("May I have your name? ");
         Scanner scannerUsername = new Scanner(System.in);
-        userName = scannerUsername.next();
-        System.out.println("Hello, " + userName + "!");
+        setUserName(scannerUsername.next());
+        System.out.println("Hello, " + getUserName() + "!");
         //scannerUsername.close();
     }
 
     public static void userComms() {
-        switch (roundResult) {
+        switch (getRoundResult()) {
             case "win":
                 System.out.println("Correct!");
                 break;
@@ -31,41 +56,41 @@ public class Engine {
                 break;
         }
 
-        if (count == 0) {
-            System.out.print("\nLet's try again, " + Engine.userName + "!\n");
+        if (getCount() == 0) {
+            System.out.print("\nLet's try again, " + getUserName() + "!\n");
             System.exit(0);
-        } else if (count == finalCount) {
-            System.out.print("Congratulations, " + Engine.userName + "!\n");
+        } else if (getCount() == Final_Count) {
+            System.out.print("Congratulations, " + getUserName() + "!\n");
         }
     }
     public static void gameLoop() {
-        while (count < finalCount) {
-            if (App.gameName.equals("2")) {
-                if (Engine.count == 0) {
+        while (getCount() < Final_Count) {
+            if (getGameName().equals("2")) {
+                if (getCount() == 0) {
                     Engine.greet();
                 }
                 Even.checkEven();
                 Engine.userComms();
-            } else if (App.gameName.equals("3")) {
-                if (Engine.count == 0) {
+            } else if (getGameName().equals("3")) {
+                if (getCount() == 0) {
                     Engine.greet();
                 }
                 Calc.calculate();
                 Engine.userComms();
-            } else if (App.gameName.equals("4")) {
-                if (Engine.count == 0) {
+            } else if (getGameName().equals("4")) {
+                if (getCount() == 0) {
                     Engine.greet();
                 }
                 GCD.findGCD();
                 Engine.userComms();
-            } else if (App.gameName.equals("5")) {
-                if (Engine.count == 0) {
+            } else if (getGameName().equals("5")) {
+                if (getCount() == 0) {
                     Engine.greet();
                 }
                 Progression.generator();
                 Engine.userComms();
-            } else if (App.gameName.equals("6")) {
-                if (Engine.count == 0) {
+            } else if (getGameName().equals("6")) {
+                if (getCount() == 0) {
                     Engine.greet();
                 }
                 Prime.primeGame();

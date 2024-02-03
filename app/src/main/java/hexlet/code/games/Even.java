@@ -20,13 +20,13 @@ public class Even {
             correctAnswer = "no";
         }
         if (isEvenAnswer.equals(correctAnswer)) {
-            Engine.roundResult = "win";
-            Engine.count++;
+            Engine.setRoundResult("win");
+            Engine.setCount(Engine.getCount() + 1);
         } else {
             System.out.println("'" + isEvenAnswer + "' is wrong answer ;(. Correct answer was '"
                     + correctAnswer + "'");
-            Engine.roundResult = "lost";
-            Engine.count = 0;
+            Engine.setRoundResult("lost");
+            Engine.setCount(0);
         }
     }
 }
