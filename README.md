@@ -5,6 +5,8 @@
 
 Example of "Even" game: https://asciinema.org/a/yFE0hDTG7epP39jg68BZkQEiW
 
+Example of "Calculator " game: https://asciinema.org/a/uOVohgRJBdFD3bkJbP0E4TcMn
+
 Example of "GCD" game: https://asciinema.org/a/vOjQIJ4aD7Sd6b5Ucj5LyvhrH
 
 Example of "Progression" game: https://asciinema.org/a/91zmDPptHmu4bjWYQWdETcQej
