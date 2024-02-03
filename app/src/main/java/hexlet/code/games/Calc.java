@@ -20,11 +20,12 @@ public class Calc {
                 case "*" -> firstNumber * secondNumber;
                 default -> 0;
             };
+            Engine.setCorrectAnswer(Integer.toString(correctAnswer));
             System.out.print("What is the result of the expression? ");
             System.out.print("Question: " + firstNumber + " " + operation + " " + secondNumber + " ");
             System.out.print("Your answer: ");
-            int operationResult = scannerAnswer.nextInt();
-            if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
+            Engine.setUserAnswer(scannerAnswer.next());
+            /*if (operation.equals("+") && operationResult == (firstNumber + secondNumber)) {
                 Engine.setRoundResult("win");
                 Engine.setCount(Engine.getCount() + 1);
             } else if (operation.equals("-") && operationResult == (firstNumber - secondNumber)) {
@@ -38,6 +39,6 @@ public class Calc {
                         + "'" + correctAnswer + "'" + " ");
                 Engine.setRoundResult("lost");
                 Engine.setCount(0);
-            }
+            } */
     }
 }

@@ -12,14 +12,13 @@ public class Even {
         System.out.print("Question: " + numberToCheck + "\n");
         System.out.print("Your answer: ");
         Scanner scannerAnswer = new Scanner(System.in);
-        String isEvenAnswer = scannerAnswer.next();
-        String correctAnswer;
+        Engine.setUserAnswer(scannerAnswer.next());
         if (numberToCheck % 2 == 0) {
-            correctAnswer = "yes";
+            Engine.setCorrectAnswer("yes");
         } else {
-            correctAnswer = "no";
+            Engine.setCorrectAnswer("no");
         }
-        if (isEvenAnswer.equals(correctAnswer)) {
+        /* if (isEvenAnswer.equals(correctAnswer)) {
             Engine.setRoundResult("win");
             Engine.setCount(Engine.getCount() + 1);
         } else {
@@ -27,6 +26,6 @@ public class Even {
                     + correctAnswer + "'");
             Engine.setRoundResult("lost");
             Engine.setCount(0);
-        }
+        } */
     }
 }

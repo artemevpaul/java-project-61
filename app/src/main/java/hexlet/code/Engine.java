@@ -37,6 +37,31 @@ public class Engine {
         public static void setRoundResult(String inputRoundResult) {
         roundResult = inputRoundResult;
         }
+    private static String userAnswer = "";
+        public static String getUserAnswer (){
+            return userAnswer;
+        }
+        public static void setUserAnswer(String userInput){
+            userAnswer = userInput;
+        }
+    private static String correctAnswer = "";
+        public static String getCorrectAnswer(){
+            return correctAnswer;
+        }
+        public static void setCorrectAnswer (String userInput){
+            correctAnswer = userInput;
+        }
+        public static void checkAnswer(){
+            if (userAnswer.equals(correctAnswer)) {
+                setRoundResult("win");
+                setCount(Engine.getCount() + 1);
+            } else {
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + correctAnswer + "'");
+                setRoundResult("lost");
+                setCount(0);
+            }
+        }
     static final int FINAL_COUNT = 3;
     public static void greet() {
         System.out.println("Welcome to the Brain Games");
@@ -71,35 +96,40 @@ public class Engine {
                         Engine.greet();
                     }
                     Even.checkEven();
-                    Engine.userComms();
+                    checkAnswer();
+                    userComms();
                 }
                 case "3" -> {
                     if (getCount() == 0) {
                         Engine.greet();
                     }
                     Calc.calculate();
-                    Engine.userComms();
+                    checkAnswer();
+                    userComms();
                 }
                 case "4" -> {
                     if (getCount() == 0) {
                         Engine.greet();
                     }
                     GCD.findGCD();
-                    Engine.userComms();
+                    checkAnswer();
+                    userComms();
                 }
                 case "5" -> {
                     if (getCount() == 0) {
                         Engine.greet();
                     }
                     Progression.generator();
-                    Engine.userComms();
+                    checkAnswer();
+                    userComms();
                 }
                 case "6" -> {
                     if (getCount() == 0) {
                         Engine.greet();
                     }
                     Prime.primeGame();
-                    Engine.userComms();
+                    checkAnswer();
+                    userComms();
                 }
             }
         }

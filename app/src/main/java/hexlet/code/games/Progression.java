@@ -18,7 +18,7 @@ public class Progression {
         for (var i = 1; i < progressionLength; i++) {
             newProgression[i] = String.valueOf(Integer.parseInt(newProgression[i - 1]) + progressionDiff);
         }
-        var correctAnswer = newProgression[progressionBlankElement];
+        Engine.setCorrectAnswer(newProgression[progressionBlankElement]);
         newProgression[progressionBlankElement] = "..";
         StringBuilder progToCheck = new StringBuilder();
         for (int i = 0; i < newProgression.length; i++) {
@@ -31,8 +31,8 @@ public class Progression {
         System.out.print("Question: " + progToCheck + "\n");
         System.out.print("Your answer: ");
         Scanner scannerAnswer = new Scanner(System.in);
-        String missingNumber = scannerAnswer.next();
-        if (missingNumber.equals(correctAnswer)) {
+        Engine.setUserAnswer(scannerAnswer.next());
+        /* if (missingNumber.equals(correctAnswer)) {
             Engine.setRoundResult("win");
             Engine.setCount(Engine.getCount() + 1);
         } else {
@@ -40,6 +40,6 @@ public class Progression {
                     + correctAnswer + "'");
             Engine.setRoundResult("lost");
             Engine.setCount(0);
-        }
+        } */
     }
 }

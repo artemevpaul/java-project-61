@@ -19,12 +19,13 @@ public class GCD {
             a = temp;
             correctAnswer = a;
         }
+        Engine.setCorrectAnswer(Integer.toString(correctAnswer));
         System.out.println("Find the greatest common divisor of given numbers.");
         System.out.println("Question: " + firstNumber + " " + secondNumber);
         Scanner scannerAnswer = new Scanner(System.in);
         System.out.println("Your answer: ");
-        int gcdAnswer = scannerAnswer.nextInt();
-        if (gcdAnswer == correctAnswer) {
+        Engine.setUserAnswer(scannerAnswer.next());
+        /* if (gcdAnswer == correctAnswer) {
             Engine.setRoundResult("win");
             Engine.setCount(Engine.getCount() + 1);
         } else {
@@ -32,6 +33,6 @@ public class GCD {
                     + correctAnswer + "'" + "\n");
             Engine.setRoundResult("lost");
             Engine.setCount(0);
-        }
+        } */
     }
 }
