@@ -38,20 +38,20 @@ public class Engine {
         roundResult = inputRoundResult;
         }
     private static String userAnswer = "";
-        public static String getUserAnswer (){
+        public static String getUserAnswer() {
             return userAnswer;
         }
-        public static void setUserAnswer(String userInput){
+        public static void setUserAnswer(String userInput) {
             userAnswer = userInput;
         }
     private static String correctAnswer = "";
         public static String getCorrectAnswer(){
             return correctAnswer;
         }
-        public static void setCorrectAnswer (String userInput){
+        public static void setCorrectAnswer(String userInput) {
             correctAnswer = userInput;
         }
-        public static void checkAnswer(){
+        public static void checkAnswer() {
             if (userAnswer.equals(correctAnswer)) {
                 setRoundResult("win");
                 setCount(Engine.getCount() + 1);
@@ -130,7 +130,7 @@ public class Engine {
                     Prime.primeGame();
                     checkAnswer();
                     userComms();
-                }
+                }default -> System.exit(0);
             }
         }
     }
