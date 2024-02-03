@@ -45,7 +45,7 @@ public class Engine {
             userAnswer = userInput;
         }
     private static String correctAnswer = "";
-        public static String getCorrectAnswer(){
+        public static String getCorrectAnswer() {
             return correctAnswer;
         }
         public static void setCorrectAnswer(String userInput) {
@@ -130,7 +130,7 @@ public class Engine {
                     Prime.primeGame();
                     checkAnswer();
                     userComms();
-                }default -> System.exit(0);
+                } default -> System.exit(0);
             }
         }
     }
