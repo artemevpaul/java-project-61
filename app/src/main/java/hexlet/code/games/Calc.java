@@ -5,13 +5,16 @@ import hexlet.code.Util;
 
 public class Calc {
     public static void play() {
-        String[][] gameData = new String[3][2];
+        final int rounds = 3;
+        final int min = 1;
+        final int max = 10;
+        String[][] gameData = new String[rounds][2];
         String gameRules = "What is the result of the expression?";
         String[] operations = {"+", "-", "*"};
 
         for (int i = 0; i < gameData.length; i++) {
-            int num1 = Util.generateRandomNumber(1, 10);
-            int num2 = Util.generateRandomNumber(1, 10);
+            int num1 = Util.generateRandomNumber(min, max);
+            int num2 = Util.generateRandomNumber(min, max);
             String operation = operations[Util.generateRandomNumber(0, operations.length - 1)];
 
             int answer;

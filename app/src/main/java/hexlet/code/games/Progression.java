@@ -6,13 +6,18 @@ import hexlet.code.Util;
 
 public class Progression {
     public static void play() {
-        String[][] gameData = new String[3][2];
+        final int min = 1;
+        final int max = 100;
+        final int maxStep = 5;
+        final int maxLength = 10;
+        final int rounds = 3;
+        String[][] gameData = new String[rounds][2];
         String gameRules = "What number is missing in the progression?";
 
         for (int i = 0; i < gameData.length; i++) {
-            int progressionStart = Util.generateRandomNumber(1, 5);
-            int progressionDiff = Util.generateRandomNumber(1, 5);
-            int progressionLength = Util.generateRandomNumber(5, 10);
+            int progressionStart = Util.generateRandomNumber(min, max);
+            int progressionDiff = Util.generateRandomNumber(min, maxStep);
+            int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
             StringBuilder progression = new StringBuilder();
             int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
 
