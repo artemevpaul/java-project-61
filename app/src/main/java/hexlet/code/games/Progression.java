@@ -1,45 +1,32 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Scanner;
+import hexlet.code.Util;
 
 public class Progression {
-    public static void generator() {
-        final int maxProgLength = 10;
-        final int minProgLength = 5;
-        int progressionLength = minProgLength + (int) (Math.random() * ((maxProgLength - minProgLength) + 1));
-        var newProgression = new String[progressionLength];
-        var progressionBlankElement = (int) (Math.random() * progressionLength);
-        var progressionDiff = (int) (Math.random() * progressionLength);
-        var progressionStart = String.valueOf(minProgLength
-                + (int) (Math.random() * ((maxProgLength - minProgLength) + 1)));
-        newProgression[0] = progressionStart;
-        for (var i = 1; i < progressionLength; i++) {
-            newProgression[i] = String.valueOf(Integer.parseInt(newProgression[i - 1]) + progressionDiff);
-        }
-        Engine.setCorrectAnswer(newProgression[progressionBlankElement]);
-        newProgression[progressionBlankElement] = "..";
-        StringBuilder progToCheck = new StringBuilder();
-        for (int i = 0; i < newProgression.length; i++) {
-            progToCheck.append(newProgression[i]);
-            if (i < newProgression.length - 1) {
-                progToCheck.append(" ");
+    public static void play() {
+        String[][] gameData = new String[3][2];
+        String gameRules = "What number is missing in the progression?";
+
+        for (int i = 0; i < gameData.length; i++) {
+            int progressionStart = Util.generateRandomNumber(1, 5);
+            int progressionDiff = Util.generateRandomNumber(1, 5);
+            int progressionLength = Util.generateRandomNumber(5, 10);
+            StringBuilder progression = new StringBuilder();
+            int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
+
+            for (int j = 0; j < progressionLength; j++) {
+                if (j == blankElement) {
+                    gameData[i][1] = Integer.toString(progressionStart + progressionDiff * j);
+                    progression.append(".. ");
+                } else {
+                    progression.append(progressionStart + progressionDiff * j).append(" ");
+                }
             }
+
+            gameData[i][0] = progression.toString().trim();
         }
-        System.out.print("What number is missing in the progression? \n");
-        System.out.print("Question: " + progToCheck + "\n");
-        System.out.print("Your answer: ");
-        Scanner scannerAnswer = new Scanner(System.in);
-        Engine.setUserAnswer(scannerAnswer.next());
-        /* if (missingNumber.equals(correctAnswer)) {
-            Engine.setRoundResult("win");
-            Engine.setCount(Engine.getCount() + 1);
-        } else {
-            System.out.println("'" + missingNumber + "' is wrong answer ;(. Correct answer was '"
-                    + correctAnswer + "'");
-            Engine.setRoundResult("lost");
-            Engine.setCount(0);
-        } */
+
+        Engine.runGame(gameData, gameRules);
     }
 }
