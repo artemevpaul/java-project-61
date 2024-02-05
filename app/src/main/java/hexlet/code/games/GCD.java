@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Util;
 
-import java.util.Scanner;
-
 public class GCD {
     public static void play() {
         String[][] gameData = new String[3][2];
