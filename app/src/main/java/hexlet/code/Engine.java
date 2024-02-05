@@ -4,8 +4,12 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static void runGame(String[][] gameData, String gameRules, String userName) {
+    public static void runGame(String[][] gameData, String gameRules) {
+        System.out.println("Welcome to the Brain Games");
+        System.out.println("May I have your name?");
         Scanner scanner = new Scanner(System.in);
+        var userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
 
         for (String[] roundData : gameData) {

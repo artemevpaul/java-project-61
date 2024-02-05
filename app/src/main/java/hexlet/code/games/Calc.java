@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Util;
 
@@ -8,12 +7,6 @@ import java.util.Scanner;
 
 public class Calc {
     public static void play() {
-        System.out.println("Welcome to the Brain Games");
-        System.out.println("May I have your name?");
-        Scanner scanner = new Scanner(System.in);
-        var userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
         String[][] gameData = new String[3][2];
         String gameRules = "What is the result of the expression?";
         String[] operations = {"+", "-", "*"};
@@ -42,6 +35,6 @@ public class Calc {
             gameData[i][1] = Integer.toString(answer);
         }
 
-        Engine.runGame(gameData, gameRules, userName);
+        Engine.runGame(gameData, gameRules);
     }
 }

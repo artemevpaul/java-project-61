@@ -7,12 +7,6 @@ import java.util.Scanner;
 
 public class Prime {
     public static void play() {
-        System.out.println("Welcome to the Brain Games");
-        System.out.println("May I have your name?");
-        Scanner scanner = new Scanner(System.in);
-        var userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
         String[][] gameData = new String[3][2];
         String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
@@ -22,7 +16,7 @@ public class Prime {
             gameData[i][1] = isPrime(number) ? "yes" : "no";
         }
 
-        Engine.runGame(gameData, gameRules, userName);
+        Engine.runGame(gameData, gameRules);
     }
 
     private static boolean isPrime(int number) {
