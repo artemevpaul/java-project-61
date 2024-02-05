@@ -45,6 +45,6 @@ public class App {
                 break;
         }
 
-        scanner.close();
+        //scanner.close();
     }
 }
