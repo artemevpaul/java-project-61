@@ -3,8 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Util;
 
+import java.util.Scanner;
+
 public class Progression {
     public static void play() {
+        System.out.println("Welcome to the Brain Games");
+        System.out.println("May I have your name?");
+        Scanner scanner = new Scanner(System.in);
+        var userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+
         String[][] gameData = new String[3][2];
         String gameRules = "What number is missing in the progression?";
 
@@ -27,6 +35,6 @@ public class Progression {
             gameData[i][0] = progression.toString().trim();
         }
 
-        Engine.runGame(gameData, gameRules);
+        Engine.runGame(gameData, gameRules, userName);
     }
 }

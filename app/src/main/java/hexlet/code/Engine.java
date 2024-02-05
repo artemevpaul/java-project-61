@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static void runGame(String[][] gameData, String gameRules) {
+    public static void runGame(String[][] gameData, String gameRules, String userName) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(gameRules);
 
@@ -20,12 +20,12 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
-                System.out.println("Let's try again!");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
         }
 
-        System.out.println("Congratulations!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 }
 
