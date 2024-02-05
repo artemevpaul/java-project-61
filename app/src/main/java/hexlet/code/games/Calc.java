@@ -15,7 +15,7 @@ public class Calc {
         System.out.println("Hello, " + userName + "!");
 
         String[][] gameData = new String[3][2];
-        String gameRules = "What is the result of the operation?";
+        String gameRules = "What is the result of the expression?";
         String[] operations = {"+", "-", "*"};
 
         for (int i = 0; i < gameData.length; i++) {
