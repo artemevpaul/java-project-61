@@ -19,21 +19,21 @@ public class Progression {
         Engine.runGame(gameData, gameRules);
     }
     private static String[] generateProgression(int min, int max, int maxStep, int maxLength) {
-            int progressionStart = Util.generateRandomNumber(min, max);
-            int progressionDiff = Util.generateRandomNumber(min, maxStep);
-            int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
-            StringBuilder progression = new StringBuilder();
-            int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
-            var missingNumber = "";
+        int progressionStart = Util.generateRandomNumber(min, max);
+        int progressionDiff = Util.generateRandomNumber(min, maxStep);
+        int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
+        StringBuilder progression = new StringBuilder();
+        int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
+        var missingNumber = "";
 
-            for (int j = 0; j < progressionLength; j++) {
-                if (j == blankElement) {
-                    missingNumber = Integer.toString(progressionStart + progressionDiff * j);
-                    progression.append(".. ");
-                } else {
-                    progression.append(progressionStart + progressionDiff * j).append(" ");
-                }
+        for (int j = 0; j < progressionLength; j++) {
+            if (j == blankElement) {
+                missingNumber = Integer.toString(progressionStart + progressionDiff * j);
+                progression.append(".. ");
+            } else {
+                progression.append(progressionStart + progressionDiff * j).append(" ");
             }
-            return new String[] {progression.toString().trim(), missingNumber};
+        }
+        return new String[] {progression.toString().trim(), missingNumber};
     }
 }
