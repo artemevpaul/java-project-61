@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Engine {
 
+    public static final int rounds = 3;
+
     public static void runGame(String[][] gameData, String gameRules) {
         System.out.println("Welcome to the Brain Games");
         System.out.println("May I have your name?");

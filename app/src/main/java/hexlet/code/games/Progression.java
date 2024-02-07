@@ -10,29 +10,30 @@ public class Progression {
         final int max = 100;
         final int maxStep = 5;
         final int maxLength = 10;
-        final int rounds = 3;
-        String[][] gameData = new String[rounds][2];
+        String[][] gameData = new String[Engine.rounds][2];
         String gameRules = "What number is missing in the progression?";
+        for (int i = 0; i < gameData.length; i++){
+            gameData[i] = generateProgression(min,max,maxStep,maxLength);
+        }
 
-        for (int i = 0; i < gameData.length; i++) {
+        Engine.runGame(gameData, gameRules);
+    }
+    private static String[] generateProgression(int min, int max, int maxStep, int maxLength) {
             int progressionStart = Util.generateRandomNumber(min, max);
             int progressionDiff = Util.generateRandomNumber(min, maxStep);
             int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
             StringBuilder progression = new StringBuilder();
             int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
+            var missingNumber = "";
 
             for (int j = 0; j < progressionLength; j++) {
                 if (j == blankElement) {
-                    gameData[i][1] = Integer.toString(progressionStart + progressionDiff * j);
+                    missingNumber = Integer.toString(progressionStart + progressionDiff * j);
                     progression.append(".. ");
                 } else {
                     progression.append(progressionStart + progressionDiff * j).append(" ");
                 }
             }
-
-            gameData[i][0] = progression.toString().trim();
-        }
-
-        Engine.runGame(gameData, gameRules);
+            return new String[] {progression.toString().trim(), missingNumber};
     }
 }
