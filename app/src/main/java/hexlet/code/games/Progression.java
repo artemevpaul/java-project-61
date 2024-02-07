@@ -10,10 +10,10 @@ public class Progression {
         final int max = 100;
         final int maxStep = 5;
         final int maxLength = 10;
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][2];
         String gameRules = "What number is missing in the progression?";
-        for (int i = 0; i < gameData.length; i++){
-            gameData[i] = generateProgression(min,max,maxStep,maxLength);
+        for (int i = 0; i < gameData.length; i++) {
+            gameData[i] = generateProgression(min, max, maxStep, maxLength);
         }
 
         Engine.runGame(gameData, gameRules);

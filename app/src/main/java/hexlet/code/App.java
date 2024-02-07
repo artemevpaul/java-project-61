@@ -26,7 +26,7 @@ public class App {
             case "4" -> GCD.play();
             case "5" -> Progression.play();
             case "6" -> Prime.play();
-            case "0" -> {}
+            case "0" -> { }
             default -> System.out.println("Unknown game");
         }
     }

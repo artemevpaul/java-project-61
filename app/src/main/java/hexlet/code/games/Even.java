@@ -7,7 +7,7 @@ public class Even {
     public static void play() {
         final int min = 1;
         final int max = 100;
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][2];
         String gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         for (int i = 0; i < gameData.length; i++) {
@@ -18,7 +18,7 @@ public class Even {
 
         Engine.runGame(gameData, gameRules);
     }
-    private static String checkEven(int number){
+    private static String checkEven(int number) {
         if (number % 2 == 0) {
             return "yes";
         } else {

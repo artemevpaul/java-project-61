@@ -7,7 +7,7 @@ public class Calc {
     public static void play() {
         final int min = 1;
         final int max = 10;
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][2];
         String gameRules = "What is the result of the expression?";
         String[] operations = {"+", "-", "*"};
 
