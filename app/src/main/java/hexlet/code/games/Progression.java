@@ -18,24 +18,23 @@ public class Progression {
             int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
             int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
             var missingNumber = Integer.toString(progressionStart + progressionDiff * blankElement);
-            gameData[i] = generateProgression(progressionStart, progressionLength, progressionDiff,
-                    blankElement, missingNumber);
+            gameData[i][0] = generateProgression(progressionStart, progressionLength, progressionDiff, blankElement);
+            gameData[i][1] = missingNumber;
         }
         Engine.runGame(gameData, gameRules);
     }
-    private static String[] generateProgression(int progressionStart, int progressionLength,
-                                                int progressionDiff, int blankElement, String missingNumber) {
+    private static String generateProgression(int progressionStart, int progressionLength,
+                                                int progressionDiff, int blankElement) {
 
         StringBuilder progression = new StringBuilder();
 
         for (int j = 0; j < progressionLength; j++) {
             if (j == blankElement) {
-                missingNumber = Integer.toString(progressionStart + progressionDiff * j);
                 progression.append(".. ");
             } else {
                 progression.append(progressionStart + progressionDiff * j).append(" ");
             }
         }
-        return new String[] {progression.toString().trim(), missingNumber};
+        return progression.toString().trim();
     }
 }
