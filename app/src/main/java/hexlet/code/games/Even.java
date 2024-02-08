@@ -13,16 +13,12 @@ public class Even {
         for (int i = 0; i < gameData.length; i++) {
             int number = Util.generateRandomNumber(min, max);
             gameData[i][0] = Integer.toString(number);
-            gameData[i][1] = checkEven(number);
+            gameData[i][1] = checkEven(number) ? "yes" : "no";
         }
 
         Engine.runGame(gameData, gameRules);
     }
-    private static String checkEven(int number) {
-        if (number % 2 == 0) {
-            return "yes";
-        } else {
-            return "no";
-        }
+    private static boolean checkEven(int number) {
+        return number % 2 == 0;
     }
 }

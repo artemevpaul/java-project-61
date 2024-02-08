@@ -13,18 +13,20 @@ public class Progression {
         String[][] gameData = new String[Engine.ROUNDS][2];
         String gameRules = "What number is missing in the progression?";
         for (int i = 0; i < gameData.length; i++) {
-            gameData[i] = generateProgression(min, max, maxStep, maxLength);
+            int progressionStart = Util.generateRandomNumber(min, max);
+            int progressionDiff = Util.generateRandomNumber(min, maxStep);
+            int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
+            int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
+            var missingNumber = Integer.toString(progressionStart + progressionDiff * blankElement);
+            gameData[i] = generateProgression(progressionStart, progressionLength, progressionDiff,
+                    blankElement, missingNumber);
         }
-
         Engine.runGame(gameData, gameRules);
     }
-    private static String[] generateProgression(int min, int max, int maxStep, int maxLength) {
-        int progressionStart = Util.generateRandomNumber(min, max);
-        int progressionDiff = Util.generateRandomNumber(min, maxStep);
-        int progressionLength = Util.generateRandomNumber(maxStep, maxLength);
+    private static String[] generateProgression(int progressionStart, int progressionLength,
+                                                int progressionDiff, int blankElement, String missingNumber) {
+
         StringBuilder progression = new StringBuilder();
-        int blankElement = Util.generateRandomNumber(0, progressionLength - 1);
-        var missingNumber = "";
 
         for (int j = 0; j < progressionLength; j++) {
             if (j == blankElement) {
